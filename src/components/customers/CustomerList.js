@@ -25,7 +25,7 @@ export const CustomerList = () => {
                       updateMessage(`You have ${customers.length} customers`)
                   }
                 },
-                [customers]
+                [customers] //dependicy array.
             )
     return (
         <>
@@ -40,3 +40,6 @@ export const CustomerList = () => {
         </>
     )
 }
+
+
+//key=  is a unique identifer. 
