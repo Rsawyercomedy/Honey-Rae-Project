@@ -7,11 +7,12 @@ import React, { useState }  from "react";
         description: "",
         emergency: false,
     })
-    
+ 
     const history = useHistory()
    
     const submitTicket = (evt) => {
-        evt.preventDefault()
+        evt.preventDefault() 
+        
     const newTicket = {
         description: ticket.description,
         emergency: ticket.emergency,
@@ -29,7 +30,7 @@ import React, { useState }  from "react";
     }
             
     return fetch("http://localhost:8088/serviceTickets", fetchOption)
-    .then(() => {
+        .then(() => {
         history.push("/tickets")
 
      })
@@ -67,13 +68,15 @@ import React, { useState }  from "react";
                             updateTicket(copy)
                         }
                     }
-                    type="checkbox" />
+                    
+                    
+                type="checkbox" />
                         
                     
 
                 </div>
             </fieldset>
-            <button onCLick={submitTicket} className="btn btn-primary">
+            <button onCLick={submitTicket} className="btn btn-primary" onClick={submitTicket}>
                 Submit Ticket
             </button>
         </form>
